@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="BookQuoteWS" targetNamespace="http://www.example.com/BookQuote" xmlns:mh="http://www.example.com/BookQuote" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/">
+	<!-- Message describes input and output parameters -->
+	<message name="GetBookPriceRequest">
+		<part name="isbn" type="xsd:string"/>
+	</message>
+	<message name="GetBookPriceResponse">
+		<part name="price" type="xsd:double"/>
+	</message>
+	<!-- PortType describes abstract interface of Web service -->
+	<portType name="BookQuote">
+		<operation name="getBookPrice">
+			<input name="isbn" message="mh:GetBookPriceRequest"/>
+			<output name="price" message="mh:GetBookPriceResponse"/>
+		</operation>
+	</portType>
+	<!-- Binding defines the protocols and encoding styles  -->
+	<binding name="BookPriceBinding" type="mh:BookQuote">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="getBookPrice">
+			<soap:operation style="rpc"/>
+			<input>
+				<soap:body use="literal" namespace="http://www.example.com/BookQuote" />
+			</input>
+			<output>
+				<soap:body use="literal" namespace="http://www.example.com/BookQuote"/>
+			</output>
+		</operation>
+	</binding>
+	<!-- Service defines the address of Web service -->
+	<service name="BookPriceService">
+		<port name="BookPricePort" binding="mh:BookPriceBinding">
+			<soap:address location="http://localhost:8080/BookQuote/services/BookPriceService"/>
+		</port>
+	</service>
+</definitions>

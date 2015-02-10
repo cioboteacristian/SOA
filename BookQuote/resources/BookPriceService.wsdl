@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="BookQuoteWS" targetNamespace="http://www.example.com/BookQuote" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:mh="http://www.example.com/BookQuote" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <message name="GetBookPriceRequest">
+    <part name="isbn" type="xsd:string">
+    </part>
+  </message>
+  <message name="GetBookPriceResponse">
+    <part name="price" type="xsd:double">
+    </part>
+  </message>
+  <portType name="BookQuote">
+    <operation name="getBookPrice">
+      <input name="isbn" message="mh:GetBookPriceRequest">
+    </input>
+      <output name="price" message="mh:GetBookPriceResponse">
+    </output>
+    </operation>
+  </portType>
+  <binding name="BookPriceBinding" type="mh:BookQuote">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getBookPrice">
+      <soap:operation style="rpc"/>
+      <input>
+        <soap:body use="literal" namespace="http://www.example.com/BookQuote"/>
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://www.example.com/BookQuote"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="BookPriceService">
+    <port name="BookPricePort" binding="mh:BookPriceBinding">
+      <soap:address location="http://www.example.com/BookQuote"/>
+    </port>
+  </service>
+</definitions>
