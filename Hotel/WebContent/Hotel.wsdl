@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="HotelWS" targetNamespace="http://www.example.com/Hotel" xmlns:mh="http://www.example.com/Hotel" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/">
+	
+	
+	<!-- Message describes input and output parameters -->
+	<message name="CheckHotelAvailabilityRequest">
+		<part name="city" type="xsd:string"/>
+		<part name="numberOfGuests" type="xsd:int"/>
+		<part name="date" type="xsd:date"/>
+	</message>
+	<message name="CheckHotelAvailabilityResponse">
+		<part name="hotelCodeList" type="mh:intList"/>	
+		
+	</message>
+	<message name="BookHotelRoomRequest">
+		<part name="date" type="xsd:date"/>
+		<part name="hotelCode" type="xsd:int"/>
+		<part name="numberOfGuests" type="xsd:int"/>
+	</message>
+	<message name="BookHotelRoomResponse">
+		<part name="confirmed" type="xsd:boolean"/>
+	</message>
+	<!-- PortType describes abstract interface of Web service -->
+	<portType name="Hotel">
+		<operation name="checkHotelAvailability">
+			<input name="availabilityInput" message="mh:CheckHotelAvailabilityRequest"/>
+			<output name="availabilityOutput" message="mh:CheckHotelAvailabilityResponse"/>
+		</operation>
+		<operation name="bookHotelRoom">
+			<input name="hotelBookingInput" message="mh:BookHotelRoomRequest"/>
+			<output name="hotelBookingOutput" message="mh:BookHotelRoomResponse"/>
+		</operation>
+	</portType>
+	<!-- Binding defines the protocols and encoding styles  -->
+	<binding name="HotelBinding" type="mh:Hotel">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="checkHotelAvailability">
+			<soap:operation style="rpc"/>
+			<input>
+				<soap:body use="literal" namespace="http://www.example.com/Hotel" />
+			</input>
+			<output>
+				<soap:body use="literal" namespace="http://www.example.com/Hotel"/>
+			</output>
+		</operation>
+		<operation name="BookHotelRoom">
+			<soap:operation style="rpc"/>
+			<input>
+				<soap:body use="literal" namespace="http://www.example.com/Hotel" />
+			</input>
+			<output>
+				<soap:body use="literal" namespace="http://www.example.com/Hotel"/>
+			</output>
+		</operation>
+	</binding>
+	<!-- Service defines the address of Web service -->
+	<service name="HotelService">
+		<port name="HotelPort" binding="mh:HotelBinding">
+			<soap:address location="http://localhost:8080/Hotel/services/HotelService"/>
+		</port>
+	</service>
+</definitions>
