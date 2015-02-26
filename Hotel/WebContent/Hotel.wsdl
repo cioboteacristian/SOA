@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions name="HotelWS" targetNamespace="http://www.example.com/Hotel" xmlns:mh="http://www.example.com/Hotel" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/">
-	
+	<types>
+		<xsd:complexType name='AvailableRoomList'>
+			<xsd:element
+      			minOccurs='0'
+     			maxOccurs='unbounded'
+      			name='roomNumber'
+      			type='xsd:int'/>
+		</xsd:complexType>	
+	</types>
 	
 	<!-- Message describes input and output parameters -->
 	<message name="CheckHotelAvailabilityRequest">
 		<part name="city" type="xsd:string"/>
-		<part name="numberOfGuests" type="xsd:int"/>
+		<part name="numberOfGuests" type="intList"/>
 		<part name="date" type="xsd:date"/>
 	</message>
 	<message name="CheckHotelAvailabilityResponse">
-		<part name="hotelCodeList" type="mh:intList"/>	
+		<part name="hotelCodeList" type="AvailableRoomList"/>	
 		
 	</message>
 	<message name="BookHotelRoomRequest">
@@ -43,7 +51,7 @@
 				<soap:body use="literal" namespace="http://www.example.com/Hotel"/>
 			</output>
 		</operation>
-		<operation name="BookHotelRoom">
+		<operation name="bookHotelRoom">
 			<soap:operation style="rpc"/>
 			<input>
 				<soap:body use="literal" namespace="http://www.example.com/Hotel" />
