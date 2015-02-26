@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions name="HotelWS" targetNamespace="http://www.example.com/Hotel" xmlns:mh="http://www.example.com/Hotel" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/">
+
 	<types>
-		<xsd:complexType name='AvailableRoomList'>
-			<xsd:element
-      			minOccurs='0'
-     			maxOccurs='unbounded'
-      			name='roomNumber'
-      			type='xsd:int'/>
-		</xsd:complexType>	
+		<xsd:schema targetNamespace="http://www.example.com/Hotel" xmlns:mh="http://www.example.com/Hotel" >
+			<xsd:complexType name='availableHotelList' >
+					<xsd:sequence>
+						<xsd:element
+						minOccurs='0'
+						maxOccurs='unbounded'
+						name='hotelCode'
+						type='xsd:int'/>
+					</xsd:sequence>
+				</xsd:complexType>
+		</xsd:schema>
 	</types>
+	
+	
+
 	
 	<!-- Message describes input and output parameters -->
 	<message name="CheckHotelAvailabilityRequest">
 		<part name="city" type="xsd:string"/>
-		<part name="numberOfGuests" type="intList"/>
+		<part name="numberOfGuests" type="xsd:int"/>
 		<part name="date" type="xsd:date"/>
 	</message>
 	<message name="CheckHotelAvailabilityResponse">
-		<part name="hotelCodeList" type="AvailableRoomList"/>	
-		
+		<part name="hotelCodeList" type="mh:availableHotelList"/>	
 	</message>
 	<message name="BookHotelRoomRequest">
 		<part name="date" type="xsd:date"/>
