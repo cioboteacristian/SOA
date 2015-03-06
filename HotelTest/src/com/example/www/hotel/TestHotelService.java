@@ -1,4 +1,4 @@
-package com.example.www.hotel.test;
+package com.example.www.hotel;
 
 import java.rmi.RemoteException;
 import java.text.DateFormat;
@@ -9,8 +9,8 @@ import java.util.Date;
 
 import org.apache.axis2.AxisFault;
 
-import com.example.www.hotel.test.HotelServiceStub.BookHotelRoom;
-import com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailability;
+import com.example.www.hotel.HotelServiceStub.BookHotelRoom;
+import com.example.www.hotel.HotelServiceStub.CheckHotelAvailability;
 
 public class TestHotelService {
 	private static HotelServiceStub stub;
@@ -93,7 +93,7 @@ public class TestHotelService {
 				System.out.println("Testing BookHotelRoom: booking a room on a different date should succeed");
 				bookHotelRoomRequest=createBookHotelRoom(2, 2);
 				Calendar c = Calendar.getInstance();
-				c.setTime(getSimpleToday());
+				c.setTime(getSimpleDate());
 				c.add(Calendar.DATE,1);
 				Date newDate = c.getTime();
 				bookHotelRoomRequest.setDate(newDate);
@@ -110,13 +110,13 @@ public class TestHotelService {
 	
 	private static BookHotelRoom createBookHotelRoom(int hotelCode, int numberOfPersons) {
 		BookHotelRoom result = new BookHotelRoom();
-		result.setDate(getSimpleToday());
+		result.setDate(getSimpleDate());
 		result.setHotelCode(hotelCode);
 		result.setNumberOfGuests(numberOfPersons);
 		return result;
 	}
 
-	private static Date getSimpleToday(){
+	private static Date getSimpleDate(){
 		DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 		
 		Date today = new Date();
@@ -130,7 +130,7 @@ public class TestHotelService {
 	
 	private static CheckHotelAvailability createCheckHotelAvailability(String city, int numberOfGuests){
 		CheckHotelAvailability result = new CheckHotelAvailability();
-		result.setDate(getSimpleToday());
+		result.setDate(getSimpleDate());
 		result.setNumberOfGuests(numberOfGuests);
 		result.setCity(city);
 		

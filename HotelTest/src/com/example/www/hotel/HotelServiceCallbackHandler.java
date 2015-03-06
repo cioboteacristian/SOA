@@ -6,7 +6,7 @@
  * by the Apache Axis2 version: 1.6.2  Built on : Apr 17, 2012 (05:33:49 IST)
  */
 
-    package com.example.www.hotel.test;
+    package com.example.www.hotel;
 
     /**
      *  HotelServiceCallbackHandler Callback class, Users can extend this class and implement
@@ -49,7 +49,7 @@
             * override this method for handling normal response from checkHotelAvailability operation
             */
            public void receiveResultcheckHotelAvailability(
-                    com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailabilityResponse result
+                    com.example.www.hotel.HotelServiceStub.CheckHotelAvailabilityResponse result
                         ) {
            }
 
@@ -65,7 +65,7 @@
             * override this method for handling normal response from bookHotelRoom operation
             */
            public void receiveResultbookHotelRoom(
-                    com.example.www.hotel.test.HotelServiceStub.BookHotelRoomResponse result
+                    com.example.www.hotel.HotelServiceStub.BookHotelRoomResponse result
                         ) {
            }
 

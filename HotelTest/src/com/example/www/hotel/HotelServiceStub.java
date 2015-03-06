@@ -5,7 +5,7 @@
  * This file was auto-generated from WSDL
  * by the Apache Axis2 version: 1.6.2  Built on : Apr 17, 2012 (05:33:49 IST)
  */
-        package com.example.www.hotel.test;
+        package com.example.www.hotel;
 
         
 
@@ -141,16 +141,16 @@
                     /**
                      * Auto generated method signature
                      * 
-                     * @see com.example.www.hotel.test.HotelService#checkHotelAvailability
+                     * @see com.example.www.hotel.HotelService#checkHotelAvailability
                      * @param checkHotelAvailability0
                     
                      */
 
                     
 
-                            public  com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailabilityResponse checkHotelAvailability(
+                            public  com.example.www.hotel.HotelServiceStub.CheckHotelAvailabilityResponse checkHotelAvailability(
 
-                            com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailability checkHotelAvailability0)
+                            com.example.www.hotel.HotelServiceStub.CheckHotelAvailability checkHotelAvailability0)
                         
 
                     throws java.rmi.RemoteException
@@ -201,11 +201,11 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailabilityResponse.class,
+                                             com.example.www.hotel.HotelServiceStub.CheckHotelAvailabilityResponse.class,
                                               getEnvelopeNamespaces(_returnEnv));
 
                                
-                                        return (com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailabilityResponse)object;
+                                        return (com.example.www.hotel.HotelServiceStub.CheckHotelAvailabilityResponse)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -263,15 +263,15 @@
                 /**
                 * Auto generated method signature for Asynchronous Invocations
                 * 
-                * @see com.example.www.hotel.test.HotelService#startcheckHotelAvailability
+                * @see com.example.www.hotel.HotelService#startcheckHotelAvailability
                     * @param checkHotelAvailability0
                 
                 */
                 public  void startcheckHotelAvailability(
 
-                 com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailability checkHotelAvailability0,
+                 com.example.www.hotel.HotelServiceStub.CheckHotelAvailability checkHotelAvailability0,
 
-                  final com.example.www.hotel.test.HotelServiceCallbackHandler callback)
+                  final com.example.www.hotel.HotelServiceCallbackHandler callback)
 
                 throws java.rmi.RemoteException{
 
@@ -315,10 +315,10 @@
                                 org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
                                 
                                         java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
-                                                                         com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailabilityResponse.class,
+                                                                         com.example.www.hotel.HotelServiceStub.CheckHotelAvailabilityResponse.class,
                                                                          getEnvelopeNamespaces(resultEnv));
                                         callback.receiveResultcheckHotelAvailability(
-                                        (com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailabilityResponse)object);
+                                        (com.example.www.hotel.HotelServiceStub.CheckHotelAvailabilityResponse)object);
                                         
                             } catch (org.apache.axis2.AxisFault e) {
                                 callback.receiveErrorcheckHotelAvailability(e);
@@ -410,16 +410,16 @@
                     /**
                      * Auto generated method signature
                      * 
-                     * @see com.example.www.hotel.test.HotelService#bookHotelRoom
+                     * @see com.example.www.hotel.HotelService#bookHotelRoom
                      * @param bookHotelRoom2
                     
                      */
 
                     
 
-                            public  com.example.www.hotel.test.HotelServiceStub.BookHotelRoomResponse bookHotelRoom(
+                            public  com.example.www.hotel.HotelServiceStub.BookHotelRoomResponse bookHotelRoom(
 
-                            com.example.www.hotel.test.HotelServiceStub.BookHotelRoom bookHotelRoom2)
+                            com.example.www.hotel.HotelServiceStub.BookHotelRoom bookHotelRoom2)
                         
 
                     throws java.rmi.RemoteException
@@ -470,11 +470,11 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.example.www.hotel.test.HotelServiceStub.BookHotelRoomResponse.class,
+                                             com.example.www.hotel.HotelServiceStub.BookHotelRoomResponse.class,
                                               getEnvelopeNamespaces(_returnEnv));
 
                                
-                                        return (com.example.www.hotel.test.HotelServiceStub.BookHotelRoomResponse)object;
+                                        return (com.example.www.hotel.HotelServiceStub.BookHotelRoomResponse)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -532,15 +532,15 @@
                 /**
                 * Auto generated method signature for Asynchronous Invocations
                 * 
-                * @see com.example.www.hotel.test.HotelService#startbookHotelRoom
+                * @see com.example.www.hotel.HotelService#startbookHotelRoom
                     * @param bookHotelRoom2
                 
                 */
                 public  void startbookHotelRoom(
 
-                 com.example.www.hotel.test.HotelServiceStub.BookHotelRoom bookHotelRoom2,
+                 com.example.www.hotel.HotelServiceStub.BookHotelRoom bookHotelRoom2,
 
-                  final com.example.www.hotel.test.HotelServiceCallbackHandler callback)
+                  final com.example.www.hotel.HotelServiceCallbackHandler callback)
 
                 throws java.rmi.RemoteException{
 
@@ -584,10 +584,10 @@
                                 org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
                                 
                                         java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
-                                                                         com.example.www.hotel.test.HotelServiceStub.BookHotelRoomResponse.class,
+                                                                         com.example.www.hotel.HotelServiceStub.BookHotelRoomResponse.class,
                                                                          getEnvelopeNamespaces(resultEnv));
                                         callback.receiveResultbookHotelRoom(
-                                        (com.example.www.hotel.test.HotelServiceStub.BookHotelRoomResponse)object);
+                                        (com.example.www.hotel.HotelServiceStub.BookHotelRoomResponse)object);
                                         
                             } catch (org.apache.axis2.AxisFault e) {
                                 callback.receiveErrorbookHotelRoom(e);
@@ -3284,12 +3284,12 @@
         }
            
     
-            private  org.apache.axiom.om.OMElement  toOM(com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailability param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.example.www.hotel.HotelServiceStub.CheckHotelAvailability param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailability.MY_QNAME,
+                             return param.getOMElement(com.example.www.hotel.HotelServiceStub.CheckHotelAvailability.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -3298,12 +3298,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailabilityResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.example.www.hotel.HotelServiceStub.CheckHotelAvailabilityResponse param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailabilityResponse.MY_QNAME,
+                             return param.getOMElement(com.example.www.hotel.HotelServiceStub.CheckHotelAvailabilityResponse.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -3312,12 +3312,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.example.www.hotel.test.HotelServiceStub.BookHotelRoom param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.example.www.hotel.HotelServiceStub.BookHotelRoom param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.example.www.hotel.test.HotelServiceStub.BookHotelRoom.MY_QNAME,
+                             return param.getOMElement(com.example.www.hotel.HotelServiceStub.BookHotelRoom.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -3326,12 +3326,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.example.www.hotel.test.HotelServiceStub.BookHotelRoomResponse param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.example.www.hotel.HotelServiceStub.BookHotelRoomResponse param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.example.www.hotel.test.HotelServiceStub.BookHotelRoomResponse.MY_QNAME,
+                             return param.getOMElement(com.example.www.hotel.HotelServiceStub.BookHotelRoomResponse.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -3341,14 +3341,14 @@
             }
         
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailability param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.example.www.hotel.HotelServiceStub.CheckHotelAvailability param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailability.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.example.www.hotel.HotelServiceStub.CheckHotelAvailability.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -3362,14 +3362,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.example.www.hotel.test.HotelServiceStub.BookHotelRoom param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.example.www.hotel.HotelServiceStub.BookHotelRoom param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.example.www.hotel.test.HotelServiceStub.BookHotelRoom.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.example.www.hotel.HotelServiceStub.BookHotelRoom.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -3399,30 +3399,30 @@
 
         try {
         
-                if (com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailability.class.equals(type)){
+                if (com.example.www.hotel.HotelServiceStub.CheckHotelAvailability.class.equals(type)){
                 
-                           return com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailability.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.example.www.hotel.HotelServiceStub.CheckHotelAvailability.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailabilityResponse.class.equals(type)){
+                if (com.example.www.hotel.HotelServiceStub.CheckHotelAvailabilityResponse.class.equals(type)){
                 
-                           return com.example.www.hotel.test.HotelServiceStub.CheckHotelAvailabilityResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.example.www.hotel.HotelServiceStub.CheckHotelAvailabilityResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.example.www.hotel.test.HotelServiceStub.BookHotelRoom.class.equals(type)){
+                if (com.example.www.hotel.HotelServiceStub.BookHotelRoom.class.equals(type)){
                 
-                           return com.example.www.hotel.test.HotelServiceStub.BookHotelRoom.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.example.www.hotel.HotelServiceStub.BookHotelRoom.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.example.www.hotel.test.HotelServiceStub.BookHotelRoomResponse.class.equals(type)){
+                if (com.example.www.hotel.HotelServiceStub.BookHotelRoomResponse.class.equals(type)){
                 
-                           return com.example.www.hotel.test.HotelServiceStub.BookHotelRoomResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.example.www.hotel.HotelServiceStub.BookHotelRoomResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
