@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- This file was auto-generated from WSDL --><!-- by the Apache Axis2 version: 1.6.2  Built on : Apr 17, 2012 (05:33:49 IST) --><serviceGroup>
+    <service name="RadiologyCallbackService">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-only" class="org.pahospital.www.radiologycallbackservice.RadiologyCallbackServiceMessageReceiverInOnly"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">org.pahospital.www.radiologycallbackservice.RadiologyCallbackServiceSkeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="SendRadiologyReport" mep="http://www.w3.org/ns/wsdl/in-only" namespace="http://www.PAHospital.org/RadiologyCallbackService/">
+            <actionMapping>http://www.PAHospital.org/RadiologyCallbackService/SendRadiologyReport</actionMapping>
+        </operation>
+    </service>
+</serviceGroup>
